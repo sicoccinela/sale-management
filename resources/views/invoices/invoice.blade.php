@@ -55,7 +55,7 @@
         .image-grid img {
             border: 1px solid #ddd;
             border-radius: 8px;
-            width: 180px;
+            width: 400px;
             height: auto;
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
