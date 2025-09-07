@@ -69,7 +69,7 @@
 </head>
 <body>
     <div class="header">
-        <h2>Invoice #{{ $order->id }}</h2>
+        <h2>Invoice #{{ $order->id }}/{{ $order->order_code }}</h2>
         <p>Sales: <b>{{ $order->sales->name }}</b></p>
     </div>
 

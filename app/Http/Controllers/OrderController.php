@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Support\Str;
 
 class OrderController extends Controller
 {
@@ -17,6 +18,6 @@ class OrderController extends Controller
     public function download(Order $order)
     {
         $pdf = Pdf::loadView('invoices.invoice', compact('order'));
-        return $pdf->download('invoice-'.$order->id.'.pdf');
+        return $pdf->download('invoice-' . Str::slug($order->sales->name) . '-' . $order->order_code . '.pdf');
     }
 }
